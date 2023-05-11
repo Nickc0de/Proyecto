@@ -12,6 +12,21 @@ import { styled } from '@mui/material/styles';
 
 const CardUno = (props) =>{
 
+  const asigned=[
+    {
+    itemlisttitle:"Braia Bruna",
+    captionlist:"Guida",
+    expiration:"Ven 17/02/2023"
+  }, {
+    itemlisttitle:"Braia Bruna",
+    captionlist:"Guida",
+    expiration:"Ven 17/02/2023"
+  }, {
+    itemlisttitle:"Braia Bruna",
+    captionlist:"Guida",
+    expiration:"Ven 17/02/2023"
+  }
+  ]; 
 
   const {valores} = props;
 
@@ -42,13 +57,13 @@ return(
     justifyContent="space-between" 
     alignItems="center"
     spacing={3}>
-      <Grid item xs={12} sm={7}>
+      <Grid item xs={8} sm={7}>
       <Typography variant="overline">{valores.titlecardone}</Typography>
-      <Grid item xs={12} sm={8}>
+      <Grid item xs={8} sm={8}>
       <Typography variant="caption">{valores.captioncardone}</Typography>
       </Grid>
       </Grid>
-      <Grid item xs={12} sm={5}>
+      <Grid item xs={4} sm={5}>
         <Typography variant="caption" color="red">{valores.programming}</Typography>
       </Grid>
     </Grid>
@@ -67,28 +82,51 @@ return(
     />
     
     <CardContent>
-    <Grid 
+    {/* <Grid 
     container
     direction="row"
     justifyContent="space-between" 
     alignItems="center"
     spacing={3}>
-      <Grid item xs={12} sm={7}>
+      <Grid item xs={8} sm={7}>
       <Typography variant="overline">{valores.itemlisttitle}</Typography>
-      <Grid item xs={12} sm={8}>
+      <Grid item xs={8} sm={8}>
       <Typography variant="caption">{valores.captionlist}</Typography>
       </Grid>
       </Grid>
-    <Grid item xs={12} sm={5}>
+    <Grid item xs={4} sm={5}>
       <Typography variant="caption" >{valores.expiration}</Typography>
     </Grid>
+    </Grid> */}
+    {
+      asigned.map((item,index) => {
+        return (
+          <Grid 
+    container
+    direction="row"
+    justifyContent="space-between" 
+    alignItems="center"
+    spacing={3}>
+      <Grid item xs={8} sm={7}>
+      <Typography variant="overline">{item.itemlisttitle}</Typography>
+      <Grid item xs={8} sm={8}>
+      <Typography variant="caption">{item.captionlist}</Typography>
+      </Grid>
+      </Grid>
+    <Grid item xs={4} sm={5}>
+      <Typography variant="caption" >{item.expiration}</Typography>
     </Grid>
+    </Grid>
+        )
+      }
+      )
+    }
     <Stack sx={{marginTop:'13px'}}>
       <Divider variant="" />
     </Stack>
     
 
-    <Grid 
+    {/* <Grid 
     container
     direction="row"
     justifyContent="space-between" 
@@ -106,9 +144,9 @@ return(
     </Grid>
     <Stack sx={{marginTop:'13px'}}>
       <Divider variant="" />
-    </Stack>
+    </Stack> */}
 
-    <Grid 
+    {/* <Grid 
     container
     direction="row"
     justifyContent="space-between" 
@@ -126,9 +164,9 @@ return(
     </Grid>
     <Stack sx={{marginTop:'13px'}}>
       <Divider variant="" />
-    </Stack>
+    </Stack> */}
 
-    <Grid 
+    {/* <Grid 
     container
     direction="row"
     justifyContent="space-between" 
@@ -146,7 +184,7 @@ return(
     </Grid>
     <Stack sx={{marginTop:'13px'}}>
       <Divider variant="" />
-    </Stack>
+    </Stack> */}
 
     </CardContent>
 
